@@ -1,0 +1,42 @@
+import java.util.Scanner;
+
+//2d array means 2 dimensional array
+//means array of array
+//int[][] ara=new int[size][size];
+//first squar denotes the row
+//second squar denotes the columns
+
+public class array_2d_problems {
+
+    static void printarr(int[][] arr) {
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = 0; j < arr[i].length; j++) {
+                System.out.print(arr[i][j] + " ");
+            }
+            System.out.println();
+        }
+    }
+
+    public static void main(String[] args) {
+        // int [][] arr= new int[4][5];
+
+        int[][] arr2 = { { 1, 2, 3 }, { 4, 5, 6 }, { 7, 8, 9 } };
+        printarr(arr2);
+        Scanner sc = new Scanner(System.in);
+        System.out.println("enter number of row");
+        int r = sc.nextInt();
+        System.out.println("enter number of columns ");
+        int c = sc.nextInt();
+        System.out.println("enter "+r*c+" elements");
+        int[][] arr3 = new int[r][c];
+        for (int i = 0; i < r; i++) {
+            for (int j = 0; j < c; j++) {
+                arr3[i][j] = sc.nextInt();
+
+            }
+            System.out.println();
+        }
+        printarr(arr3);
+
+    }
+}
